@@ -1,6 +1,7 @@
 from Repository.RepositoryJson import RepositoryJson
-
+from Service.ProblemService import ProblemaLaboratorService
 from Service.StudentService import StudentService
+from Service.GradeService import AsignareService
 from Ui.Consola import Consola
 
 
@@ -12,14 +13,14 @@ def main():
     asignareRepository = RepositoryJson("./asignare.json")
 
     studentService = StudentService(studentRepository)
-    # problemaLaboratorService = ProblemaLaboratorService(problemaLaboratorRepository, asignareRepository)
-    # asignareService = AsignareService(asignareRepository, studentRepository, problemaLaboratorRepository)
+    problemaLaboratorService = ProblemaLaboratorService(problemaLaboratorRepository, asignareRepository)
+    asignareService = AsignareService(asignareRepository, studentRepository, problemaLaboratorRepository)
 
     studentRepository.loadFromFile()
     problemaLaboratorRepository.loadFromFile()
     asignareRepository.loadFromFile()
 
-    consola = Consola(studentService)
+    consola = Consola(studentService,problemaLaboratorService,asignareService)
     consola.meniu()
 
 main()

@@ -1,0 +1,16 @@
+{
+  "1": {
+    "py/object": "Domain.Grade.Asignare",
+    "_Entity__idEntity": "1",
+    "_Asignare__idStudent": "1",
+    "_Asignare__nrLab_nrProblema": "1 1",
+    "_Asignare__nota": "10"
+  },
+  "2": {
+    "py/object": "Domain.Grade.Asignare",
+    "_Entity__idEntity": "2",
+    "_Asignare__idStudent": "2",
+    "_Asignare__nrLab_nrProblema": "1 1",
+    "_Asignare__nota": "3"
+  }
+}

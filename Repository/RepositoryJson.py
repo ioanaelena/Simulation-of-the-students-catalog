@@ -38,7 +38,7 @@ class RepositoryJson(RepositoryInMemory):
         super().sterge(idEntitate)
         self.__writeFile()
 
-    def modifica(self, entity: Entity) -> None:
+    def modifica(self, idEntitate, entity:Entity) -> None:
         self.entitati = self.__readFile()
         super().modifica(entity.getIdEntity(), entity)
         self.__writeFile()
